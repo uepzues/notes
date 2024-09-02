@@ -22,7 +22,6 @@ export default function App() {
       .update(id, changedNote)
       .then((returnedNote) => {
         // testing for error
-        throw new Error("lol");
 
         setNotes(notes.map((note) => (note.id !== id ? note : returnedNote)));
       })
