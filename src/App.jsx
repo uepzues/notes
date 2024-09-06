@@ -21,7 +21,6 @@ export default function App() {
     noteService
       .update(id, changedNote)
       .then((returnedNote) => {
-        // testing for error
 
         setNotes(notes.map((note) => (note.id !== id ? note : returnedNote)));
       })
